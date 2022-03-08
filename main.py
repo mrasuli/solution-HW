@@ -5,13 +5,15 @@ employee_count = int(employee_count_str)
 for employee_index in range (employee_count):
 # loop through employees
 # Read first name, last name, and age
-    first_name = input("please enter the first name: ")
+    while True:
+        first_name = input("please enter the first name: ")
+        if len(first_name.strip()) > 0:
+            break
     last_name = input("please enter your last name: ")
     age_str = input("please enter your age: ")
     age = int(age_str)
     print(f"Employee data: First Name: {first_name}, Last Name: {last_name}, Age: {age}")
 #
-
 
 # check first name and last name are not empty
 
